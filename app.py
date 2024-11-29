@@ -7,7 +7,6 @@ with open('ML/spam_model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('ML/vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
-
 app = Flask(__name__)
 CORS(app)
 @app.route('/detect', methods=['POST'])
@@ -49,4 +48,5 @@ def get_location():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True,port=port)
