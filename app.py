@@ -3,9 +3,9 @@ from flask_cors import CORS
 import pickle
 import requests
 # Load model and vectorizer
-with open('ML/spam_model.pkl', 'rb') as f:
+with open('spam_model.pkl', 'rb') as f:
     model = pickle.load(f)
-with open('ML/vectorizer.pkl', 'rb') as f:
+with open('vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
 app = Flask(__name__)
 CORS(app)
