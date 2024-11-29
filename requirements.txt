@@ -4,4 +4,4 @@ flask_cors
 requests
 scikit-learn
 pandas
-pickle
+
