@@ -8,6 +8,7 @@ with open('spam_model.pkl', 'rb') as f:
 with open('vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
 app = Flask(__name__)
+port = 5000
 CORS(app)
 @app.route('/detect', methods=['POST'])
 def detect_spam():
